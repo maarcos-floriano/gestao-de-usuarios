@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Usuarios</h1>
+        <ul>
+            {% for usuario in usuarios %}
+            <li>{{ usuario[1] }} - {{ usuario[2] }} - {{ usuario[3] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{url_for('new_user')}}">
+            <button class="btn-add-user">Novo Usuario</button>
+        </a>
+        <a href="{{url_for('limpar_pacientes')}}" class="clear-user">Limpar Pacientes</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+.btn-add-user{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.clear-user{
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
