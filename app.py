@@ -49,7 +49,7 @@ def new_user():
 def clear_users():
     conn = sqlite3.connect('database.db') # Conecta ao banco de dados
     cursor = conn.cursor()
-    cursor.execute('DELETE * FROM users')
+    cursor.execute('DELETE FROM users')
     conn.commit()
     conn.close()
     return redirect(url_for('index'))

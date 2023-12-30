@@ -10,14 +10,14 @@
     <div class="container">
         <h1>Lista de Usuarios</h1>
         <ul>
-            {% for usuario in usuarios %}
-            <li>{{ usuario[1] }} - {{ usuario[2] }} - {{ usuario[3] }}</li>
+            {% for users in users %}
+            <li>{{ users[1] }} - {{ users[2] }} - {{ users[3] }}</li>
             {% endfor %}
         </ul>
         <a href="{{url_for('new_user')}}">
             <button class="btn-add-user">Novo Usuario</button>
         </a>
-        <a href="{{url_for('limpar_pacientes')}}" class="clear-user">Limpar Pacientes</a>
+        <a href="{{url_for('clear_users')}}" class="clear-user">Limpar Pacientes</a>
     </div>
 </body>
 </html>
