@@ -26,3 +26,19 @@ def index():
     users = cursor.fetchall() # Pega todos os resultados
     conn.close() # Fecha a conexão
     return render_template('index.html', users=users) # Renderiza o template
+
+@app.route('/registrar', methods=['GET', 'POST'])
+def new_user():
+    if request.method == 'POST':
+        name = request.form['nome']
+        email = request.form['email']
+        password = request.form['senha']
+
+        conn = sqlite3.connect('database.db') # Conecta ao banco de dados
+        cursor = conn.cursor()
+        cursor.execute('''
+        INSERT INTO users (name, email, password)
+        VALUES (?, ?, ?)
+        ''', (name, email, password)) # Executa o comando SQL
+        conn.commit()
+        conn.close()
