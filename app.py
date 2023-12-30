@@ -42,3 +42,14 @@ def new_user():
         ''', (name, email, password)) # Executa o comando SQL
         conn.commit()
         conn.close()
+        return redirect(url_for('index'))
+    return render_template('new_user.html')
+
+@app.route('/limpar_usuarios')
+def clear_users():
+    conn = sqlite3.connect('database.db') # Conecta ao banco de dados
+    cursor = conn.cursor()
+    cursor.execute('DELETE * FROM users')
+    conn.commit()
+    conn.close()
+    return redirect(url_for('index'))
