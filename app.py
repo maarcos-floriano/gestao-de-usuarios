@@ -53,3 +53,7 @@ def clear_users():
     conn.commit()
     conn.close()
     return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True) # Inicia o servidor em modo debug
+    
